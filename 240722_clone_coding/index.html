@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="myreset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-inner">
+        <h1>
+          <a href="#">
+            <img src="./assets/logo.png" alt="logo" />
+            <span class="visually-hidden">Logoipsum</span>
+          </a>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#hire">Hire</a></li>
+          </ul>
+        </nav>
+        <button class="contact-button">Contact Us</button>
+        <button id="side-menu-btn" class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <div id="side-menu-backdrop" class="side-menu-backdrop"></div>
+    <aside id="side-menu" class="side-menu">
+      <button id="close-btn" class="close-button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="contact-button">Contact Us</button>
+      <nav class="gnb">
+        <ul>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#how-it-works">How it Works</a></li>
+          <li><a href="#hire">Hire</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="hero-container">
+      <div class="hero-text-wrap">
+        <p>Great <span>software</span> is</p>
+        <p>built by great <span>teams</span></p>
+        <p>
+          We help build and manage a team of world-class developers to bring
+          your vision to life
+        </p>
+        <button>Let’s get started!</button>
+      </div>
+      <div class="hero-img">
+        <img src="./assets/hero-img.png" alt="hero image" />
+      </div>
+    </section>
+    <section class="service-container color-section">
+      <h2><strong>Services we offer</strong></h2>
+      <div class="swiper service-cards">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="./assets/mobile-app.png" alt="mobile app icon" />
+              </div>
+              <h4>Mobile App Development</h4>
+              <p>
+                A Website is an extension of yourself and we can help you to
+                express it properly. Your website is your number one marketing
+                asset because we live in a digital age.
+              </p>
+              <a href="#" aria-label="Mobile App Development"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="./assets/code.png" alt="code icon" />
+              </div>
+              <h4>Web Design & Development</h4>
+              <p>
+                A Website is an extension of yourself and we can help you to
+                express it properly. Your website is your number one marketing
+                asset because we live in a digital age.
+              </p>
+              <a href="#" aria-label="Web Design & Development"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="./assets/dashboard.png" alt="dashboard icon" />
+              </div>
+              <h4>Software Testing Service</h4>
+              <p>
+                A Website is an extension of yourself and we can help you to
+                express it properly. Your website is your number one marketing
+                asset because we live in a digital age.
+              </p>
+              <a href="#" aria-label="Software Testing Service"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="./assets/chart.png" alt="chart icon" />
+              </div>
+              <h4>Digital Marketing & Strategy</h4>
+              <p>
+                A Website is an extension of yourself and we can help you to
+                express it properly. Your website is your number one marketing
+                asset because we live in a digital age.
+              </p>
+              <a href="#" aria-label="Digital Marketing & Strategy"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="./assets/paints.png" alt="paints icon" />
+              </div>
+              <h4>Creative Design & Branding</h4>
+              <p>
+                A Website is an extension of yourself and we can help you to
+                express it properly. Your website is your number one marketing
+                asset because we live in a digital age.
+              </p>
+              <a href="#" aria-label="Creative Design & Branding"></a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="progress-bar">
+          <span class="slide-index" id="slide-index">01</span>
+          <div class="bar">
+            <div class="back"></div>
+          </div>
+          <span class="total-index">05</span>
+        </div>
+      </div>
+    </section>
+    <section class="about-container">
+      <div class="about-us">
+        <div class="about-details deco-line-left">
+          <h2>
+            Leading companies trust us <br /><strong
+              >to develop software</strong
+            >
+          </h2>
+          <p class="detail-summary">
+            We <span>add development capacity</span> to tech teams. Our value
+            isn’t limited to building teams but is equally distributed across
+            the project lifecycle. We are a custom software development company
+            that guarantees the successful delivery of your project.
+          </p>
+          <a href="#" class="more">
+            <span>See more Informations</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div id="about-video-container" class="video-container">
+          <video
+            class="about-video"
+            id="about-video"
+            preload="metadata"
+            poster="./assets/video-thumb.png"
+          >
+            <source src="./assets/sample-video.mp4" type="video/mp4" />
+            about us video
+          </video>
+          <button id="play-btn" class="play-btn">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <div id="about-video-control" class="controls">
+            <div class="progress-container">
+              <input
+                type="range"
+                id="progress-bar"
+                class="progress-bar"
+                value="0"
+                step="0.01"
+                min="0"
+                max="100"
+              />
+            </div>
+            <span id="current-time" class="time">0:00</span>&nbsp;/&nbsp;
+            <span id="total-duration" class="time">0:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-extra-info deco-line-left">
+        <h2>Meet the People<br /><strong>We are Working With</strong></h2>
+      </div>
+    </section>
+    <section class="logo-container color-section">
+      <div class="swiper brand-logos">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo1.png" alt="brand logo 1" />
+          </div>
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo2.png" alt="brand logo 2" />
+          </div>
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo3.png" alt="brand logo 3" />
+          </div>
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo4.png" alt="brand logo 4" />
+          </div>
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo5.png" alt="brand logo 5" />
+          </div>
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo6.png" alt="brand logo 6" />
+          </div>
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo7.png" alt="brand logo 7" />
+          </div>
+          <div class="swiper-slide logo">
+            <img src="./assets/brand-logo8.png" alt="brand logo 8" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev logo-button-prev circle-ghost-button">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+      <div class="swiper-button-next logo-button-next circle-fill-button">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </section>
+    <section class="feedback-container">
+      <div class="feedback-details deco-line-center">
+        <h2>Why customers love <br /><strong>working with us</strong></h2>
+        <p class="detail-summary">
+          Without any doubt I recommend Alcaline Solutions as one of the best
+          web design and digital marketing agencies. One of the best agencies
+          I’ve came across so far. Wouldn’t be hesitated to introduce their work
+          to someone else.
+        </p>
+      </div>
+      <div class="swiper customer-feedbacks">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="feeback">
+              <div class="customer-profile">
+                <img src="./assets/customer1.png" alt="customer feedback 1" />
+              </div>
+              <div class="rating">
+                <img src="./assets/rating.png" alt="rating" />
+              </div>
+              <p>Romeena De Silva</p>
+              <p>Janet Cosmetics</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feeback">
+              <div class="customer-profile">
+                <img src="./assets/customer2.png" alt="customer feedback 2" />
+              </div>
+              <div class="rating">
+                <img src="./assets/rating.png" alt="rating" />
+              </div>
+              <p>Romeena De Silva</p>
+              <p>Janet Cosmetics</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feeback">
+              <div class="customer-profile">
+                <img src="./assets/customer3.png" alt="customer feedback 3" />
+              </div>
+              <div class="rating">
+                <img src="./assets/rating.png" alt="rating" />
+              </div>
+              <p>Romeena De Silva</p>
+              <p>Janet Cosmetics</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feeback">
+              <div class="customer-profile">
+                <img src="./assets/customer4.png" alt="customer feedback 4" />
+              </div>
+              <div class="rating">
+                <img src="./assets/rating.png" alt="rating" />
+              </div>
+              <p>Romeena De Silva</p>
+              <p>Janet Cosmetics</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feeback">
+              <div class="customer-profile">
+                <img src="./assets/customer5.png" alt="customer feedback 5" />
+              </div>
+              <div class="rating">
+                <img src="./assets/rating.png" alt="rating" />
+              </div>
+              <p>Romeena De Silva</p>
+              <p>Janet Cosmetics</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feeback">
+              <div class="customer-profile">
+                <img src="./assets/customer6.png" alt="customer feedback 6" />
+              </div>
+              <div class="rating">
+                <img src="./assets/rating.png" alt="rating" />
+              </div>
+              <p>Romeena De Silva</p>
+              <p>Janet Cosmetics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next feedback-button-next circle-ghost-button">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+      <div class="swiper-button-prev feedback-button-prev circle-ghost-button">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+    </section>
+    <section class="case-container color-section">
+      <div class="case-wrapper color-section-inner">
+        <div class="case-title deco-line-center">
+          <h2>Our recent <br /><strong>Case studies</strong></h2>
+        </div>
+        <div class="case-study-card">
+          <div class="case-study-img">
+            <img src="./assets/case-study1.png" alt="case study 1" />
+          </div>
+          <div class="case-study-content">
+            <h3>Website Design for SCFC Canada</h3>
+            <p>
+              Born out of a vision, a single-minded objective that puts service
+              before anything else, Swift Clearance and Forwarding Corp. surging
+              forth to deliver the best services in the shipping and logistics
+              scenario. Its meteoric rise stems out of a solid foundation. The
+              management boasts of over 20 years of rich and varied experience
+              in the shipping and freight forwarding industry.
+            </p>
+            <a href="#" class="read-more">
+              <span>Read more</span>
+              <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="case-study-card">
+          <div class="case-study-img">
+            <img src="./assets/case-study2.png" alt="case study 2" />
+          </div>
+          <div class="case-study-content">
+            <h3>Website Design for SCFC Canada</h3>
+            <p>
+              Born out of a vision, a single-minded objective that puts service
+              before anything else, Swift Clearance and Forwarding Corp. surging
+              forth to deliver the best services in the shipping and logistics
+              scenario. Its meteoric rise stems out of a solid foundation. The
+              management boasts of over 20 years of rich and varied experience
+              in the shipping and freight forwarding industry.
+            </p>
+            <a href="#" class="read-more">
+              <span>Read more</span>
+              <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="case-study-card">
+          <div class="case-study-img">
+            <img src="./assets/case-study3.png" alt="case study 3" />
+          </div>
+          <div class="case-study-content">
+            <h3>Website Design for SCFC Canada</h3>
+            <p>
+              Born out of a vision, a single-minded objective that puts service
+              before anything else, Swift Clearance and Forwarding Corp. surging
+              forth to deliver the best services in the shipping and logistics
+              scenario. Its meteoric rise stems out of a solid foundation. The
+              management boasts of over 20 years of rich and varied experience
+              in the shipping and freight forwarding industry.
+            </p>
+            <a href="#" class="read-more">
+              <span>Read more</span>
+              <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <a href="#" class="read-more">
+          <span>Read more case studies</span>
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
