@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+.slide {
+  max-width: 600px;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+.slide-wrap {
+  border: 10px solid #d7fc45;
+}
+.btn {
+  cursor: pointer;
+}
+.btn,
+.slider-dot {
+  position: absolute;
+}
+.slider-dot {
+  left: 40%;
+  bottom: -30px;
+}
+.slider-dot > span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d7fc45;
+  cursor: pointer;
+}
+.slider-dot > span:first-of-type {
+  background-color: #060604;
+  color: white;
+}
+.slider-dot > span:hover {
+  background-color: #060604;
+}
+.dot1 {
+  left: 0;
+}
+.dot2 {
+  left: 30px;
+}
+.dot3 {
+  left: 60px;
+}
+.dot4 {
+  left: 90px;
+}
+
+.btn {
+  top: 50%;
+
+  /* style 수정 */
+  padding: 8px 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: #d7fc45;
+  color: #060604;
+}
+/* style 추가 */
+.btn:hover {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: #060604;
+  color: #d7fc45;
+}
+
+.prev {
+  left: -50px;
+}
+.next {
+  right: -50px;
+}
+.slide-wrap {
+  overflow: hidden;
+}
+.sliderUl {
+  display: flex;
+  width: 300%;
+  transform: translateX(-33.33%);
+  transition: transform 0.5s ease-in-out;
+}
+.slider {
+  width: calc(100% / 3);
+}
+.slider:nth-of-type(3) ~ .slider {
+  display: none;
+}
+.slider > div {
+  position: relative;
+  padding-top: 35%;
+  overflow: hidden;
+}
+.slider > div > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slider > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider > div p {
+  z-index: 1;
+  background-color: rgb(6 6 4 / 70%);
+  color: white;
+  padding: 2rem;
+}
