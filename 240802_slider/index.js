@@ -2,10 +2,17 @@ const $slideUl = document.querySelector('.sliderUl');
 const $slideItems = document.querySelectorAll('.slider');
 const $prevBtn = document.querySelector('.btn.prev');
 const $nextBtn = document.querySelector('.btn.next');
-const $dots = document.querySelectorAll('.slider-dot > span');
+const $slideDots = document.querySelector('.slider-dot');
 
+// $slideItems는 NodeList이기 때문에 pop()과 같은 배열 함수를 사용하지 못함
 let slideArray = [...$slideItems];
 let isAnimating = false;
+
+for (let i = 0; i < $slideItems.length; i++) {
+  $slideDots.innerHTML += `<span class='dot${i + 1}'></span>`;
+}
+
+const $dots = document.querySelectorAll('.slider-dot > span');
 
 const appendSlides = (arr) => {
   $slideUl.innerHTML = '';
@@ -41,8 +48,7 @@ const animateSlide = async (seconds) => {
 const handleButtonClick = async (e) => {
   e.preventDefault();
   if (isAnimating) return;
-
-  const direction = e.target.className;
+  const direction = e.currentTarget.className;
 
   if (direction.includes('prev')) slideArray.unshift(slideArray.pop());
   else slideArray.push(slideArray.shift());
@@ -51,11 +57,12 @@ const handleButtonClick = async (e) => {
     ? `translateX(0%)`
     : `translateX(-66.66%)`;
 
-  animateSlide(0.5);
+  await animateSlide(0.5);
   activeDots();
 };
 
-const handleDotClick = (index) => {
+const handleDotClick = async (index) => {
+  if (isAnimating) return;
   const originSlideArray = [...$slideItems];
   const newSlideArray = [
     ...originSlideArray.slice(index - 1),
@@ -66,11 +73,13 @@ const handleDotClick = (index) => {
   );
   const transSeconds = Math.abs(currentSlide - (index + 1)) === 1 ? 0.5 : 0.4;
 
+  if (index + 1 === currentSlide) return;
+
   slideArray = newSlideArray;
   $slideUl.style.transform =
     currentSlide > index + 1 ? `translateX(0%)` : `translateX(-66.66%)`;
 
-  animateSlide(transSeconds);
+  await animateSlide(transSeconds);
   activeDots();
 };
 
