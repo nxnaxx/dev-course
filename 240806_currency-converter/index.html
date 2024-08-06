@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환율 계산기</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>환율 계산기</h1>
+      <div class="con">
+        <div class="currency-con">
+          <p>Amount</p>
+          <div class="currency">
+            <select name="currency-one" id="currency-one"></select>
+            <input type="number" id="amount-one" value="1" min="0" />
+          </div>
+        </div>
+        <div class="currency-con">
+          <p>Converted Amount</p>
+          <div class="currency">
+            <select name="currency-two" id="currency-two"></select>
+            <input type="number" id="amount-two" value="1" min="0" disabled />
+          </div>
+        </div>
+        <button id="swap">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </button>
+      </div>
+      <p id="rate">
+        <span>표시환율</span>
+        <span></span>
+      </p>
+    </main>
+  </body>
+</html>
