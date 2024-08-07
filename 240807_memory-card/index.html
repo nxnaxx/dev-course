@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>암기 카드</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div id="modal-con" class="modal-con">
+        <div class="modal-wrap">
+          <div class="modal-top">
+            <h2>새로운 항목 추가</h2>
+            <button id="close-modal-btn">닫기</button>
+          </div>
+          <div class="question">
+            <p>질문</p>
+            <textarea
+              name="question"
+              id="question-input"
+              placeholder="질문을 적어주세요"
+            ></textarea>
+          </div>
+          <div class="answer">
+            <p>답변</p>
+            <textarea
+              name="answer"
+              id="answer-input"
+              placeholder="내용을 적어주세요"
+            ></textarea>
+          </div>
+          <button id="add-btn">추가하기</button>
+          <p id="validation" class="validation">
+            <i class="fa-solid fa-circle-exclamation"></i> 내용을 모두
+            입력해주세요.
+          </p>
+        </div>
+      </div>
+      <section>
+        <div class="main-top">
+          <h2>암기를 재미있게! 플래쉬 카드</h2>
+          <button id="open-modal-btn">항목 추가</button>
+        </div>
+        <div class="cards-wrap">
+          <ul id="card-list" class="card-list">
+            <li class="card init">
+              <p>새로운 카드를 등록하세요.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="pagination">
+          <button id="prev-btn"><i class="fa-solid fa-angle-left"></i></button>
+          <span id="pages">0 / 0</span>
+          <button id="next-btn"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+        <div class="main-bottom">
+          <button id="clear-btn" class="clear-btn">모든 기록 삭제</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
