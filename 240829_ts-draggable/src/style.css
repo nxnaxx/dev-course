@@ -1,0 +1,13 @@
+#draggable-list {
+  width: 250px;
+  list-style: none;
+}
+#draggable-list li {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #eaeaea;
+}
+#draggable-list li.dragging {
+  opacity: 0.8;
+  background-color: aliceblue;
+}
