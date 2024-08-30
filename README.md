@@ -7,3 +7,9 @@
 ### 240806 환율 계산기 구현
 
 ### 240807 memory card 구현
+
+### 240829 TypeScript Conversion
+
+- currency converter
+- infinite scroll
+- draggable
